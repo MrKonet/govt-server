@@ -7,11 +7,10 @@ const app = express();
 env.config()
 
 // Initialize CORS middleware
-
+app.use(cors())
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(cors())
 const port = process.env.PORT || 3000;
   
 // MongoDB URI and database name
